@@ -20,11 +20,11 @@ def update_rra (rra_filename, *args):
 
 def main():
     prefs = read_configuration(os.path.join(os.path.dirname(__file__),'fritz-speed.ini'))
-    fc = fritzconnection.FritzConnection()
-    status = fc.call_action('WANCommonInterfaceConfig', 'GetTotalBytesSent')
+    fc = fritzconnection.FritzConnection(address=prefs['fritz_ip'])
+    status = fc.call_action('WANCommonIFC', 'GetTotalBytesSent')
     bytes_up =  status['NewTotalBytesSent']
 
-    status = fc.call_action('WANCommonInterfaceConfig', 'GetTotalBytesReceived')
+    status = fc.call_action('WANCommonIFC', 'GetTotalBytesReceived')
     bytes_down =  status['NewTotalBytesReceived']
     update_rra(prefs['rra_filename'], str(bytes_up), str(bytes_down))
 

@@ -1,4 +1,5 @@
 [DEFAULT]
+fritz_ip: 169.254.1.1
 rra_filename: /var/rrdtool/wan_traffic.rra
 graph_height: 300
 graph_width: 500
