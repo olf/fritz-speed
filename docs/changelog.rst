@@ -1,6 +1,12 @@
 Changelog
 =========
 
+Version 0.1.3
+-------------
+
+* updated to new ServiceName
+* new setting in fritz-speed.ini: fritz_ip to specify the IP address of the FRITZ!Box
+
 Version 0.1.2
 -------------
 
@@ -8,7 +14,7 @@ Version 0.1.2
   directly from the configuration file.
 * renamed the default configuration file so that changes to this file do not
   interfere with updates coming from the repo.
-  
+
   *Pull request contributed by Olaf Peters (http://magicolf.de)*
 
 Version 0.1.1
